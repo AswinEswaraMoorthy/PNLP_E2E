@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class launchDriver {
+public class LaunchDriver {
 
 	public static WebDriver driver;
 

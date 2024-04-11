@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class e2eStepDefinition {
+public class E2EStepDefinition {
 
-	public e2eStepDefinition(WebDriver driver) {
+	public E2EStepDefinition(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 

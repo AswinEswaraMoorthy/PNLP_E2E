@@ -1,3 +1,6 @@
+#aswin.moorthy@capestart.com
+
+@Regression
 Feature: PharmaNLP Login Functionallity
 
 Scenario: Authorized users can login PharmaNLP application

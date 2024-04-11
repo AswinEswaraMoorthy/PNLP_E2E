@@ -6,20 +6,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.utils.Baseclass;
-import com.utils.loadProperties;
+import com.utils.LoadProperties;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class hooks extends Baseclass {
+public class Hooks extends Baseclass {
 
-	public static loginStepDefinition login;
+	public static LoginStepDefinition login;
 
 	@Before
 	public static void launchBrowser() throws Throwable {
 
-		switch (loadProperties.getProperties("BROWSER")) {
+		switch (LoadProperties.getProperties("BROWSER")) {
 		case "Chrome":
 
 			driver = new ChromeDriver();
@@ -42,13 +42,13 @@ public class hooks extends Baseclass {
 
 	}
 
-	@After
-	public void close() {
+	//@After
+	/*public void close() {
 
 		if (driver != null) {
 			//driver.quit();
-		}
+		}*/
 
-	}
+	//}
 
 }

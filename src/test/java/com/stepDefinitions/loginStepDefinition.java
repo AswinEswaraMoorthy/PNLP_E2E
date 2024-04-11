@@ -8,19 +8,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import com.github.dockerjava.api.model.Driver;
 import com.pageobject.LoginPage;
 import com.utils.Baseclass;
-import com.utils.loadProperties;
+import com.utils.LoadProperties;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class loginStepDefinition extends Baseclass {
+public class LoginStepDefinition extends Baseclass {
 
 	LoginPage lp = new LoginPage(driver);
 
 	@Given("User lauch the PharmaNLP application")
 	public void user_lauch_the_pharma_nlp_application() throws Throwable {
-		driver.get(loadProperties.getProperties("App_URL"));
+		driver.get(LoadProperties.getProperties("App_URL"));
 	}
 
 	@When("User login with valid username and password")

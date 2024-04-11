@@ -53,16 +53,15 @@ public class LoginPage extends Baseclass {
 	private WebElement search;
 
 	public void validation() throws InterruptedException {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='search']")));
-		Text(search, "test");
+		wait.until(ExpectedConditions.elementToBeClickable(search));
+		passText(search, "test");
 
 	}
 
 	public void isLoggedIn() throws InterruptedException {
 		explicitwait();
-		String Actual = constantValues.default_Url;
-		String CurrentUrl = driver.getCurrentUrl();
-		Assert.assertEquals(Actual, CurrentUrl);
+		//Actual needs to be updated in assert
+		Assert.assertEquals(constantValues.default_Url, driver.getCurrentUrl());
 
 	}
 

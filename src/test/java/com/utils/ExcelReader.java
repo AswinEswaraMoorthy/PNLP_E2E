@@ -21,7 +21,9 @@ import org.openxmlformats.schemas.spreadsheetml.x2006.main.CTRow;
 public class ExcelReader {
 
 	public Object[][] getTestData() throws IOException {
-		XSSFWorkbook workbook = new XSSFWorkbook("C:\\Users\\aswin.moorthy\\Automation\\PNLP_BDD\\src\\test\\resources\\testdatas\\PNLP.xlsx");
+		String userdir = System.getProperty("user.dir");
+		XSSFWorkbook workbook = new XSSFWorkbook(userdir +"\\src\\test\\resources\\testdatas\\PNLP.xlsx");
+		//XSSFWorkbook workbook = new XSSFWorkbook("C:\\Users\\aswin.moorthy\\Automation\\PNLP_BDD\\src\\test\\resources\\testdatas\\PNLP.xlsx");
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 
 		int rowCount = sheet.getLastRowNum();

@@ -7,14 +7,22 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Properties;
 
-public class loadProperties{
-	
-	public static String getProperties(String key) throws Throwable {
-        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\aswin.moorthy\\Automation\\PNLP_BDD\\config.properties");
-        Properties properties = new Properties();
-        properties.load(fileInputStream);
-        return properties.getProperty(key);
-    }
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-	
+public class LoadProperties {
+
+	public static String getProperties(String key) throws Throwable {
+
+		String userdir = System.getProperty("user.dir");
+		FileInputStream fileInputStream = new FileInputStream(userdir +"\\config.properties");
+
+		/*
+		 * FileInputStream fileInputStream = new FileInputStream(
+		 * "C:\\Users\\aswin.moorthy\\Automation\\PNLP_BDD\\config.properties");
+		 */
+		Properties properties = new Properties();
+		properties.load(fileInputStream);
+		return properties.getProperty(key);
+	}
+
 }
