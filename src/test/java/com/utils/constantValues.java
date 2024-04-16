@@ -18,5 +18,8 @@ public class ConstantValues {
 	public static String pdfuploadToaster = "Pdf Uploaded Successfully";
 	public static String clinicalOverviewReportGenerateToaster = "Clinical Overview Report generated successfully";
 	public static String clinicalOverviewReportSaveToaster = "Clinical Overview Report saved successfully.";
+	public static String invalidUserNameToaster ="Invalid username or password";
+	
+	
 
 }

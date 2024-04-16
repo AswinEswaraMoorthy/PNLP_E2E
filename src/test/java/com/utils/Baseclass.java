@@ -52,12 +52,6 @@ public class Baseclass {
 
 	}
 
-	public static void validateToasterMessage(WebDriver driver, WebElement toasterElement, String expectedMessage) {
-		wait.until(ExpectedConditions.visibilityOf(toasterElement));
-		String actualMessage = toasterElement.getText();
-		assert actualMessage.equals(expectedMessage) : "Toaster message doesn't match expected";
-	}
-
 	public static WebElement waitForElementToBeClickable(WebDriver driver, WebElement element, Duration timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -70,8 +64,15 @@ public class Baseclass {
 	}
 
 	// clear
-	public WebElement clearText(WebElement clear, String text) {
+	public WebElement clearText(WebElement clear) {
 		clear.clear();
 		return clear;
+	}
+
+	// toaster
+	public static void validateToasterMessage(WebElement toasterElement, String expectedMessage) {
+		wait.until(ExpectedConditions.visibilityOf(toasterElement));
+		String actualMessage = toasterElement.getText();
+		assert actualMessage.equals(expectedMessage) : "Toaster message doesn't match expected";
 	}
 }
