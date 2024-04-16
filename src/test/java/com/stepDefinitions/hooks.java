@@ -15,6 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Hooks extends Baseclass {
 
 	public static LoginStepDefinition login;
+	
 
 	@Before
 	public static void launchBrowser() throws Throwable {
