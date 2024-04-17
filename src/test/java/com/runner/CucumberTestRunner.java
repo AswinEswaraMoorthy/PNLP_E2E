@@ -11,5 +11,5 @@ import io.cucumber.junit.CucumberOptions;
 				"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm" }, monochrome = false, dryRun = false)
 
 public class CucumberTestRunner {
-
+	
 }
